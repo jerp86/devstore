@@ -1,5 +1,6 @@
 import { api } from '@/data/api'
 import { Product } from '@/data/types/products'
+import { currencyFormat } from '@/utils/currencyFormat'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -36,12 +37,7 @@ export default async function Home() {
         <section className="absolute bottom-28 right-28 h-12 flex items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
           <span className="text-sm truncate">{highlightedProduct.title}</span>
           <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
-            {highlightedProduct.price.toLocaleString('pt-BR', {
-              style: 'currency',
-              currency: 'BRL',
-              minimumFractionDigits: 0,
-              maximumFractionDigits: 0,
-            })}
+            {currencyFormat(highlightedProduct.price)}
           </span>
         </section>
       </Link>
@@ -65,12 +61,7 @@ export default async function Home() {
           <section className="absolute bottom-10 right-10 h-12 flex items-center gap-2 max-w-[280px] rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
             <span className="text-sm truncate">{title}</span>
             <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
-              {price.toLocaleString('pt-BR', {
-                style: 'currency',
-                currency: 'BRL',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-              })}
+              {currencyFormat(price)}
             </span>
           </section>
         </Link>
