@@ -2,7 +2,7 @@ describe('add product to cart', () => {
   // Assim que cada teste iniciar
   beforeEach(() => {
     // Visite o site
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
   })
 
   it('should be able to navigate to the product page and it to the cart', () => {
