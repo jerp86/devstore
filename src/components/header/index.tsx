@@ -14,7 +14,7 @@ export default function Header() {
           devstore
         </Link>
 
-        <Suspense>
+        <Suspense fallback={null}>
           <SearchForm />
         </Suspense>
       </section>
