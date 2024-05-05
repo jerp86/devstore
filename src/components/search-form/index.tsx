@@ -35,6 +35,9 @@ export default function SearchForm() {
         className="flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-500"
         name="q"
         defaultValue={query}
+        autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="off"
       />
     </form>
   )
