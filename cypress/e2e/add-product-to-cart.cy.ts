@@ -73,7 +73,7 @@ describe('add product to cart', () => {
     cy.contains('Cart (1)').should('exist')
   })
 
-  it.only('should be able to search for a product, submitting form with Enter key and add it to the cart', () => {
+  it('should be able to search for a product, submitting form with Enter key and add it to the cart', () => {
     // Procurando o input de busca, que tem o name="q"
     cy.get('input[name="q"]')
       .should('exist', 'be.visible') // Verificando se o input existe e está visível
