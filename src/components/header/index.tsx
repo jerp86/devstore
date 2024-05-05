@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { CartWidget } from '../cart-widget'
-import { SearchForm } from '../search-form'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+
+const SearchForm = dynamic(() => import('../search-form'))
 
 export default function Header() {
   return (
@@ -11,7 +14,9 @@ export default function Header() {
           devstore
         </Link>
 
-        <SearchForm />
+        <Suspense>
+          <SearchForm />
+        </Suspense>
       </section>
 
       <section className="flex items-center gap-4">
