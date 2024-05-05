@@ -1,3 +1,4 @@
+import { env } from '@/env'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
   title: {
     template: '%s | devstore',
     default: 'devstore',
+  },
+  metadataBase: new URL(env.APP_URL),
+  alternates: {
+    canonical: '/',
   },
 }
 
