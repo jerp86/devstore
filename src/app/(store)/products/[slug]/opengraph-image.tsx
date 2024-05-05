@@ -11,8 +11,6 @@ interface OgProductImageProps {
   params: { slug: string }
 }
 
-export const runtime = 'edge'
-
 async function getProductBySlug(slug: string): Promise<Product> {
   const response = await api(`/products/${slug}`, {
     next: {
