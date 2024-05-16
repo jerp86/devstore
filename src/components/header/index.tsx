@@ -34,6 +34,17 @@ export default function Header() {
             height={24}
           />
         </Link>
+
+        <Link href="/" className="flex items-center gap-2 hover:underline">
+          <span className="text-sm">Test account</span>
+          <Image
+            src="https://github.com/iguana-3d.png"
+            alt="Imagem de perfil do usuário"
+            className="h-6 w-6 rounded-full"
+            width={24}
+            height={24}
+          />
+        </Link>
       </section>
     </header>
   )
